@@ -1,0 +1,25 @@
+package Test;
+
+
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+import com.hibernate.Calculator;
+
+public class CalculatorTest {
+	
+	@Test
+	public void divideTest() {
+		Calculator c = new Calculator() ; 
+		int actualRes = c.divide(10, 2) ; 
+		assertEquals(5,actualRes) ;
+	}
+	@Test 
+	public void divideTestZero() {
+		Calculator c = new Calculator() ; 
+		int actual  = c.divide(1,0) ; 
+		assertEquals(0,actual) ;
+	}
+}
