@@ -56,12 +56,13 @@ public class PassportDao {
 			return "User not found" ;
 		}
 	}
-	public void fetchAll() {
+	public String fetchAll() {
 		String fetch = "Select p from Passport p" ; 
 		Query query = em.createQuery(fetch) ; 
 		List<Passport> list = query.getResultList() ; 
 		for(Passport p : list) {
 			System.out.println(p);
 		}
+		return "fetched" ;
 	}
 }
