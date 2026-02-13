@@ -15,6 +15,13 @@ public class Car {
 	
 	@OneToOne // to create foreign key we use @OneToOne wihtout this it will throw an error 
 	private Engine engine ; // this will act as a foreign key 
+	public Engine getEngine() {
+		return engine ; 
+	}
+	
+	public void setEngine(Engine engine) {
+		this.engine = engine ; 
+	}
 	
 	public int getId() {
 		return id;
