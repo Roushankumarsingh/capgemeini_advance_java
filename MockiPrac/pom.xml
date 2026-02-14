@@ -30,7 +30,7 @@
 
 			<artifactId>mockito-junit-jupiter</artifactId>
 
-			<version>5.11.0</version>
+			<version>5.14.2</version>
 
 			<scope>test</scope>
 
