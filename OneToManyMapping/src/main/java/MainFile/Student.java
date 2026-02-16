@@ -10,25 +10,35 @@ import javax.persistence.*;
 
 public class Student {
 	@Id
-	int student_id ; 
-	public int getStudent_id() {
-		return student_id;
+	int id; 
+	String name ; 
+	String branch ; 
+	@ManyToOne
+	@JoinColumn
+	private College c ;
+	public int getId() {
+		return id;
 	}
-	public void setStudent_id(int student_id) {
-		this.student_id = student_id;
+	public void setId(int id) {
+		this.id = id;
 	}
-	public String getS_name() {
-		return s_name;
+	public String getName() {
+		return name;
 	}
-	public void setS_name(String s_name) {
-		this.s_name = s_name;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getB_name() {
-		return b_name;
+	public String getBranch() {
+		return branch;
 	}
-	public void setB_name(String b_name) {
-		this.b_name = b_name;
+	public void setBranch(String branch) {
+		this.branch = branch;
 	}
-	String s_name ; 
-	String b_name ; 
+	public College getC() {
+		return c;
+	}
+	public void setC(College c) {
+		this.c = c;
+	} 
+	
 }

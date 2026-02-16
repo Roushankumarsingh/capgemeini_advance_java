@@ -13,7 +13,7 @@ public class College {
 	String name ; 
 	String location ; 
 	String pincode ;
-	@OneToMany
+	@OneToMany(mappedBy="c")
 	List<Student> list ;
 	public int getCid() {
 		return cid;

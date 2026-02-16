@@ -58,7 +58,9 @@ public class UserService {
 		int id = 101 ; 
 		System.out.println(ud.deleteUser(id));
 	}
-	public void updateAmount(int id,double amount) {
+	public void updateAmount() {
+		int id = 10001 ; 
+		double amount = 5000.0;
 		Purchase p = em.find(Purchase.class, 10001) ; 
 		p.setTotalAmount(amount);
 		et.begin(); 

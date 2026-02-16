@@ -6,6 +6,8 @@ import javax.persistence.*;
 
 public class Department {
 	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE , generator = "number" )
+	@SequenceGenerator( name="number" ,sequenceName ="number_sequence" ,   initialValue = 100 , allocationSize = 1  )  
 	int did ;
 	String dname ; 
 	String mname ; 
@@ -34,5 +36,4 @@ public class Department {
 	public void setEmpno(int empno) {
 		this.empno = empno;
 	}
-	
 }
