@@ -119,6 +119,6 @@ public class UserMain {
 //		u.deletePost(); 
 //		u.addComments(); 
 //		u.fetchComments();
-		u.fetchAllUser();
+//		u.fetchAllUser();
 	}
 }

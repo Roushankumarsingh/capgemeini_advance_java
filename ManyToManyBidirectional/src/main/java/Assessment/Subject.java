@@ -1,6 +1,7 @@
 package Assessment;
+import java.util.List;
+
 import javax.persistence.*;
-import java.util.*;
 
 @Entity 
 
@@ -9,7 +10,14 @@ public class Subject {
 	int id ; 
 	String name ; 
 	int days ;
-	
+	@ManyToMany(mappedBy = "l")
+	List<Student> list ; 
+	public List<Student> getList() {
+		return list;
+	}
+	public void setList(List<Student> list) {
+		this.list = list;
+	}
 	public int getId() {
 		return id;
 	}
