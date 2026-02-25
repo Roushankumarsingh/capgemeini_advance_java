@@ -43,19 +43,16 @@ public class DepartmentDoctor {
         System.out.println("Doctor belongs to: " +
                 doctor.getDepartment().getName());
 
-        // ===== Transfer Doctor =====
-        em.getTransaction().begin();
+      
+        et.begin();
         cardio.removeDoctor(d2);
         neuro.addDoctor(d2);
-        em.getTransaction().commit();
+        et.commit();
 
         System.out.println("Doctor transferred successfully.");
 
-        // ===== JPQL Query =====
-        TypedQuery<Doctor> query =
-                em.createQuery(
-                        "SELECT d FROM Doctor d WHERE d.department.name = :dname",
-                        Doctor.class);
+        
+        Query query = em.createQuery("SELECT d FROM Doctor d WHERE d.department.name = :dname",Doctor.class);
 
         query.setParameter("dname", "Cardiology");
 
