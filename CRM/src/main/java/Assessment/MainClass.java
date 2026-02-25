@@ -5,9 +5,9 @@ import java.util.*;
 public class MainClass {
 	
 	public static void main(String[] args) {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("postgres") ; 
-		EntityManager em = emf.createEntityManager() ; 
-		EntityTransaction et = em.getTransaction() ;
+//		EntityManagerFactory emf = Persistence.createEntityManagerFactory("postgres") ; 
+//		EntityManager em = emf.createEntityManager() ; 
+//		EntityTransaction et = em.getTransaction() ;
 //		CustomerService cs = new CustomerService();
 //		Customer c = new Customer() ; 
 //		c.setEmail("abcde@gmail.com");
@@ -19,9 +19,9 @@ public class MainClass {
 //		a.setPincode("4568");
 //		a.setState("Bihar");
 //		c.setA(a);
-		Lead l = new Lead() ; 
-		l.setSource("Soruce");
-		l.setStatus("Delivered");
+//		Lead l = new Lead() ; 
+//		l.setSource("Soruce");
+//		l.setStatus("Delivered");
 //		l.setC(c);
 //		c.setL(l);
 //		et.begin();
@@ -30,7 +30,7 @@ public class MainClass {
 //		et.commit();
 //		cs.register(c);
 //		cs.update(2,"bcd@gmail.com");
-		LeadService ls = new LeadService() ;
+//		LeadService ls = new LeadService() ;
 //		Lead l = new Lead() ;
 //		l.setSource("Soruces");
 //		l.setStatus("Pending");
@@ -61,12 +61,12 @@ public class MainClass {
 //		Product p = new Product() ;
 //		p.setAmount(2000.0);
 //		p.setName("Patanjali ghee");
-		List<Order> ol = new ArrayList<>() ;
+//		List<Order> ol = new ArrayList<>() ;
 //		List<SalesEmployee> se = new ArrayList<>() ;
-		Order o1 = em.find(Order.class, 10004) ; 
-		Order o2 = em.find(Order.class , 10005) ; 
-		ol.add(o2) ; 
-		ol.add(o1) ;
+//		Order o1 = em.find(Order.class, 10004) ; 
+//		Order o2 = em.find(Order.class , 10005) ; 
+//		ol.add(o2) ; 
+//		ol.add(o1) ;
 //		SalesEmployee s1 = em.find(SalesEmployee.class , 11000) ; 
 //		SalesEmployee s2 = em.find(SalesEmployee.class , 11001) ;
 //		se.add(s1) ; 
@@ -83,7 +83,7 @@ public class MainClass {
 //		ts.register(st);
 //		CustomerService cs1 = new CustomerService() ;
 //		cs1.delete(3); // delete executed 
-		OrderService os = new OrderService()  ; 
-		os.totalCalculation();
+//		OrderService os = new OrderService()  ; 
+//		os.totalCalculation();
 	}
 }
